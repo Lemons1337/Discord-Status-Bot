@@ -71,7 +71,7 @@ Discord.Status = class {
         };
 
         this.ws.onclose = async message => {
-            startBot(token);
+            message.code === 4004 ? null : startBot(token);
         };
     }
 };
