@@ -71,7 +71,7 @@ Discord.Status = class {
         };
 
         this.ws.onclose = async message => {
-            console.log(chalk.hex('#FF0000')('Login Failed | Token: %s'), token);
+            startBot(token);
         };
     }
 };
