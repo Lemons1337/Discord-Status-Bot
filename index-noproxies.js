@@ -1,5 +1,4 @@
 const request = require('request');
-const tunnel = require('tunnel');
 const WebSocket = require('ws');
 const chalk = require('chalk');
 const fs = require('fs');
