@@ -74,21 +74,4 @@ Discord.Status = class {
             console.log(chalk.hex('#FF0000')('Login Failed | Token: %s'), token);
         };
     }
-
-    disconnect() {
-        clearInterval(this.interval);
-        return this.ws.close();
-    }
-
-    get readyAt() {
-        return Math.floor((this.currentTimestamp / 1000) - (this.readyTimestamp / 1000)) * 1000;
-    }
-
-    get uptime() {
-        return this.readyAt < 1000 ? 0 : this.readyAt;
-    }
-
-    get ping() {
-        return this.timestamp;
-    }
 };
